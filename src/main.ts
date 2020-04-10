@@ -2,17 +2,36 @@ function main(param: g.GameMainParameterObject): void {
 	const scene = new g.Scene({
 		game: g.game,
 		// このシーンで利用するアセットのIDを列挙し、シーンに通知します
-		assetIds: ["player", "shot", "se"]
+		assetIds: ["player", "shot", "se", "maintheme", "title"]
 	});
 	scene.loaded.add(() => {
 		// ここからゲーム内容を記述します
+
+        //メインテーマを再生します
+        (scene.assets["maintheme"] as g.AudioAsset).play();
+
+        //表示順別ごとにエンティティをグループ化
+        const groundLayer = new g.E({ scene: scene });
+        const itemLayer = new g.E({ scene: scene });
+        const characterLayer = new g.E({ scene: scene });
+
+        // タイトル画像を groundLayer に追加
+        const groundSprite = new g.Sprite({
+            scene: scene,
+            src: scene.assets["title"],
+            x: 0,
+            y: 0,
+            parent: groundLayer
+        });
+        scene.append(groundSprite);
 
 		// プレイヤーを生成します
 		const player = new g.Sprite({
 			scene: scene,
 			src: scene.assets["player"],
 			width: (scene.assets["player"] as g.ImageAsset).width,
-			height: (scene.assets["player"] as g.ImageAsset).height
+			height: (scene.assets["player"] as g.ImageAsset).height,
+            parent: characterLayer
 		});
 
 		// プレイヤーの初期座標を、画面の中心に設定します
@@ -36,7 +55,8 @@ function main(param: g.GameMainParameterObject): void {
 				scene: scene,
 				src: scene.assets["shot"],
 				width: (scene.assets["shot"] as g.ImageAsset).width,
-				height: (scene.assets["shot"] as g.ImageAsset).height
+				height: (scene.assets["shot"] as g.ImageAsset).height,
+                parent: itemLayer
 			});
 
 			// 弾の初期座標を、プレイヤーの少し右に設定します

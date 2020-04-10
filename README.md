@@ -10,7 +10,7 @@
 この作業は `typescript-game-sample` を新しく生成するごとに必要です。
 
 ```sh
-npm install
+yarn install
 ```
 
 ### ビルド方法
@@ -18,7 +18,7 @@ npm install
 `typescript-game-sample` はTypeScriptで書かれているため、以下のコマンドでJavaScriptファイルに変換する必要があります。
 
 ```sh
-npm run build
+yarn build
 ```
 
 `src` ディレクトリ以下のTypeScriptファイルがコンパイルされ、`script` ディレクトリ以下にJavaScriptファイルが生成されます。
@@ -29,7 +29,7 @@ npm run build
 
 以下のどちらかを実行後、ブラウザで `http://localhost:3000/game/` にアクセスすることでゲームを実行できます。
 
-* `npm start`
+* `yarn start`
 
 * `npm install -g @akashic/akashic-sandbox` 後、 `akashic-sandbox .`
 

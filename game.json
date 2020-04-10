@@ -26,6 +26,18 @@
 			"type": "script",
 			"path": "script/main.js",
 			"global": true
+		},
+		"maintheme": {
+			"type": "audio",
+			"path": "audio/maintheme",
+			"systemId": "music",
+			"duration": 117578
+		},
+		"title": {
+			"type": "image",
+			"width": 800,
+			"height": 600,
+			"path": "image/title.jpg"
 		}
 	},
 	"moduleMainScripts": {},
