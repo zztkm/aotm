@@ -1,13 +1,12 @@
-# typescript-game-sample
+# あつまれ！おれたちの森
 
-**typescript-game-sample**はTypeScriptでAkashicのゲームを作る際のサンプルプロジェクトです。
 
 ## 利用方法
 
- `typescript-game-sample` を利用するにはNode.jsが必要です。
+ `あつまれ！おれたちの森` を利用するにはNode.jsが必要です。
 
 初回のみ、以下のコマンドを実行して、ビルドに必要なパッケージをインストールしてください。
-この作業は `typescript-game-sample` を新しく生成するごとに必要です。
+この作業は `あつまれ！おれたちの森` を新しく生成するごとに必要です。
 
 ```sh
 yarn install
@@ -15,7 +14,7 @@ yarn install
 
 ### ビルド方法
 
-`typescript-game-sample` はTypeScriptで書かれているため、以下のコマンドでJavaScriptファイルに変換する必要があります。
+`あつまれ！おれたちの森` はTypeScriptで書かれているため、以下のコマンドでJavaScriptファイルに変換する必要があります。
 
 ```sh
 yarn build
@@ -66,13 +65,13 @@ yarn build
 
 ### npm モジュールの追加・削除
 
-`typescript-game-sample` でnpmモジュールを利用する場合、このディレクトリで `akashic install <package_name>` することで npm モジュールを追加することができます。
+`あつまれ！おれたちの森` でnpmモジュールを利用する場合、このディレクトリで `akashic install <package_name>` することで npm モジュールを追加することができます。
 
 また `akashic uninstall <package_name>` すると npm モジュールを削除することができます。
 
 ## エクスポート方法
 
-`typescript-game-sample` をエクスポートするときは以下のコマンドを利用します。
+`あつまれ！おれたちの森` をエクスポートするときは以下のコマンドを利用します。
 
 ### htmlファイルのエクスポート
 
